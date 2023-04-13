@@ -1,0 +1,102 @@
+{
+	"info": {
+		"_postman_id": "f92f0ba2-3b8d-4fd4-9db7-83f39ef34514",
+		"name": "SpringJPA-Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all clusters",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-TenantID",
+						"value": "web2",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/clusters",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clusters"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create cluster",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-TenantID",
+						"value": "web2",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userid\":\"ashu\",\r\n    \"clustername\":\"cluster3\",\r\n    \"clusterdescription\":\"cluster three\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/clusters/createCluster",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clusters",
+						"createCluster"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete cluster",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "X-TenantID",
+						"value": "web2",
+						"type": "default"
+					},
+					{
+						"key": "userid",
+						"value": "ashu",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080//clusters/deleteCluster/cluster3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"",
+						"clusters",
+						"deleteCluster",
+						"cluster3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
